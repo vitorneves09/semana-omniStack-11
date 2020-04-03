@@ -1,12 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {Link} from 'react-router-dom';
 import { FiArrowLeft } from 'react-icons/fi';
 
 import LogoImg from '../../assest/logo.svg';
 
+
 import './styles.css'
 
 export default function Register(){
+    const [name,setName] =useState();
+
+    /**
+     * asing user 
+     */
+    async function handleRegister(e){
+    
+    }
+
     return (
         <div className="register-container">
             <div className="content">
@@ -22,7 +32,7 @@ export default function Register(){
                     </Link>
                 </section>
                
-                <form>
+                <form onSubmit={handleRegister}>
                     <input placeholder="Nome da ONG"/>
                     <input placeholder="E-mail" type="email"/>
                     <input placeholder="whatsapp"/>
